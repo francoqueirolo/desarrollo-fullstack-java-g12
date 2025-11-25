@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Demo</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f6f6f6;
+        padding: 40px;
+      }
+
+      .container {
+        width: 600px;
+        height: 300px;
+        background: #ddd;
+        margin-bottom: 20px;
+        display: grid;
+
+        grid-template-columns: 300px 100px 100px;
+        gap: 10px;
+
+        justify-content: center;
+        justify-items: center;
+      }
+
+      .item {
+        background: #4a90e2;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        border-radius: 8px;
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Grid: justify-content vs justify-items</h1>
+
+    <p><strong>Prueba cambiando los valores en el CSS.</strong></p>
+
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">8</div>
+      <div class="item">8</div>
+    </div>
+  </body>
+</html>

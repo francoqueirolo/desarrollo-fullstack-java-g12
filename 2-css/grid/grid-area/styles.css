@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 .grilla {
@@ -50,3 +50,43 @@ body {
   grid-area: aside;
   background-color: brown;
 }
+
+img {
+  width: 200px;
+}
+
+@media (max-width: 600px) {
+  .grilla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+/* width >= 700px entonces... */
+/* @media (min-width: 700px) {
+  body {
+    background-color: black;
+  }
+} */
+
+/* width >= 900px entonces... */
+/* @media (min-width: 900px) {
+  body {
+    background-color: red;
+  }
+} */
+
+/* width <= 800px entonces... */
+/* @media (max-width: 800px) {
+  body {
+    background-color: green;
+  }
+} */
+
+/* width entre 800 y 600 entonces... */
+/* @media (max-width: 800px) and (min-width: 600px) {
+  body {
+    background-color: orange;
+  }
+} */

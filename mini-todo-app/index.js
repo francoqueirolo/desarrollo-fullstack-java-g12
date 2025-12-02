@@ -13,6 +13,7 @@ form.addEventListener("submit", (event) => {
 
   list.appendChild(li);
   input.value = "";
+  input.focus();
 });
 
 list.addEventListener("click", (event) => {

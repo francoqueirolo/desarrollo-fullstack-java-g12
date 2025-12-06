@@ -8,8 +8,8 @@ export const TodoApp = () => {
     useTodo();
 
   return (
-    <div className="h-screen  w-full bg-amber-200 flex justify-center items-center flex-col gap-6">
-      <div className="flex flex-col gap-6 p-6 max-w-[380px] bg-slate-600 rounded-xl">
+    <div className=" flex justify-center items-center flex-col gap-6">
+      <div className="flex flex-col gap-6 p-6 max-w-[380px] bg-amber-300 dark:bg-slate-600 rounded-xl">
         <TodoHeader />
         <TodoBody
           newTodo={newTodo}

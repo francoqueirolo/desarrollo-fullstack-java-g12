@@ -13,7 +13,7 @@ export const TodoBody = (props: Props) => {
     <form onSubmit={handleAddTodo}>
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <label className="font-bold text-slate-100">Crea un todo</label>
+          <label className="font-bold ">Crea un todo</label>
           <input
             type="text"
             value={newTodo}

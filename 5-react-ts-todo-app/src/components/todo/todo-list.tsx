@@ -5,10 +5,11 @@ interface Props {
   todos: Todo[];
   toggleTodo: (value: number) => void;
   removeTodo: (value: number) => void;
+  editTodo: (value: number) => void;
 }
 
 export const TodoList = (props: Props) => {
-  const { todos, toggleTodo, removeTodo } = props;
+  const { todos, toggleTodo, removeTodo, editTodo } = props;
 
   const hasTodos = todos.length !== 0;
 
@@ -24,6 +25,7 @@ export const TodoList = (props: Props) => {
               removeTodo={removeTodo}
               todo={todo}
               toggleTodo={toggleTodo}
+              editTodo={editTodo}
             />
           ))}
         </div>

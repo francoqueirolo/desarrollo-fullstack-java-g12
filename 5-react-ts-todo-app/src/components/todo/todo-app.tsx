@@ -4,8 +4,15 @@ import { TodoList } from "./todo-list";
 import { useTodo } from "../../hooks/use-todo";
 
 export const TodoApp = () => {
-  const { handleAddTodo, newTodo, removeTodo, todos, toggleTodo, setNewTodo } =
-    useTodo();
+  const {
+    todos,
+    newTodo,
+    handleAddTodo,
+    setNewTodo,
+    editTodo,
+    toggleTodo,
+    removeTodo,
+  } = useTodo();
 
   return (
     <div className=" flex justify-center items-center flex-col gap-6">
@@ -17,7 +24,12 @@ export const TodoApp = () => {
           handleAddTodo={handleAddTodo}
         />
       </div>
-      <TodoList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} />
+      <TodoList
+        todos={todos}
+        toggleTodo={toggleTodo}
+        removeTodo={removeTodo}
+        editTodo={editTodo}
+      />
     </div>
   );
 };

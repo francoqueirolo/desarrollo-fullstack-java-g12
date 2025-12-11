@@ -1,12 +1,12 @@
-import { ThemeToggler } from "./components/theme-toggler/theme-toggler";
-import { TodoApp } from "./components/todo/todo-app";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/router";
+import { ThemeProvider } from "./provider/theme/theme-context";
 
 function App() {
   return (
-    <main className="h-screen flex flex-col gap-10 justify-center items-center">
-      <TodoApp />
-      <ThemeToggler />
-    </main>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 

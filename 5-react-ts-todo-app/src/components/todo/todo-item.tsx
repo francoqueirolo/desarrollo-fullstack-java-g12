@@ -4,13 +4,14 @@ interface Props {
   todo: Todo;
   toggleTodo: (value: number) => void;
   removeTodo: (value: number) => void;
+  editTodo: (value: number) => void;
 }
 
 export const TodoItem = (props: Props) => {
-  const { todo, removeTodo, toggleTodo } = props;
+  const { todo, removeTodo, toggleTodo, editTodo } = props;
 
   return (
-    <div key={todo.id} className="flex gap-4">
+    <div key={todo.id} className="flex gap-4 items-center">
       <input
         type="checkbox"
         checked={todo.completed}
@@ -24,8 +25,14 @@ export const TodoItem = (props: Props) => {
       </span>
 
       <button
+        onClick={() => editTodo(todo.id)}
+        className="w-fit rounded-lg p-1 text-xs bg-slate-100 ml-auto"
+      >
+        Editar
+      </button>
+      <button
         onClick={() => removeTodo(todo.id)}
-        className="w-fit rounded-lg p-0 text-xs bg-slate-100 ml-auto"
+        className="w-fit rounded-lg p-1 text-xs bg-red-500 text-white"
       >
         Borrar
       </button>

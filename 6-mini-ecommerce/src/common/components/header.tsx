@@ -26,8 +26,8 @@ export const Header = () => {
         </button>
       </div>
 
-      {openCart && (
-        <div className="absolute right-5 top-14 max-w-[280px] bg-white text-black border border-gray-950/30 h-fit rounded-lg flex flex-col gap-6 p-2">
+      {openCart && cart.length !== 0 && (
+        <div className="absolute z-20 right-5 top-14 max-w-[280px] bg-white text-black border border-gray-950/30 h-fit rounded-lg flex flex-col gap-6 p-2">
           {cart.map((product) => (
             <div className="flex items-center gap-4">
               <img
